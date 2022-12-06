@@ -25,11 +25,11 @@ public class PublisherRepositoryImpl implements PublisherRepository {
 		return query.getResultList();
 	}
 
-	@Override
-	public Stream<Publisher> findDistinctByBooksAuthorsName(String authorName) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+//	@Override
+//	public Stream<Publisher> findDistinctByBooksAuthorsName(String authorName) {
+//		// TODO Auto-generated method stub
+//		return null;
+//	}
 
 	@Override
 	public Optional<Publisher> findById(String publisherName) {
