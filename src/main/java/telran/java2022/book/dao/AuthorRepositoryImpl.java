@@ -6,6 +6,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
 import telran.java2022.book.model.Author;
 
@@ -28,9 +29,9 @@ public class AuthorRepositoryImpl implements AuthorRepository {
 	}
 
 	@Override
+	@Transactional
 	public void delete(Author author) {
-		// TODO Auto-generated method stub
-
+		em.remove(author);
 	}
 
 }
