@@ -22,7 +22,6 @@ public class BooksRepositoryImpl implements BookRepository {
 	@Override
 	public Stream<Book> findByAuthorsName(String authorName) {
 		TypedQuery<Book> query = em.createQuery("select b from Book b join b.authors a where a.name=?1", Book.class);
-
 		query.setParameter(1, authorName);
 		return query.getResultStream();
 		
